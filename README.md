@@ -62,3 +62,71 @@ Remediation Recommendations
 Before / After Validation
         ↓
 30/60/90-Day Remediation Roadmap
+
+---
+
+# Week 1 — IAM Security Assessment
+
+## Objective
+
+The first phase of the engagement focused on reviewing the AWS Identity and Access Management (IAM) posture.
+
+The objective was to identify weaknesses related to authentication, authorization, account access, and excessive permissions, and to assess whether IAM configurations followed security best practices.
+
+## Activities Performed
+
+During the IAM assessment, I:
+
+- Reviewed IAM users, groups, and roles.
+- Examined authentication and MFA configuration.
+- Reviewed access keys and their status.
+- Investigated inactive or unnecessary credentials.
+- Reviewed IAM policies and permissions.
+- Identified excessive or potentially unnecessary access.
+- Collected configuration evidence using AWS CLI and AWS Config.
+- Assessed findings against relevant NIST security controls.
+- Assigned severity levels based on security impact.
+- Developed remediation recommendations.
+
+## Assessment Areas
+
+| Area | Assessment |
+|---|---|
+| Authentication | Reviewed account authentication controls |
+| MFA | Checked MFA enrollment and enforcement |
+| Access Keys | Reviewed credential status and usage |
+| Authorization | Examined IAM permissions and policies |
+| Least Privilege | Identified excessive or unnecessary permissions |
+| IAM Lifecycle | Reviewed inactive or unnecessary identities |
+| Evidence | Collected AWS configuration and activity evidence |
+
+## Evidence & Analysis
+
+The assessment used AWS-native evidence to validate IAM findings rather than relying solely on configuration assumptions.
+
+Configuration evidence was used to establish the state of IAM resources, while audit activity from AWS logging services was used where available to provide additional context.
+
+Sensitive account identifiers, usernames, access keys, ARNs, and other environment-specific information have been removed from the public version of this project.
+
+## Security Framework Alignment
+
+The IAM assessment was mapped primarily to NIST security controls related to:
+
+- **AC — Access Control**
+- **IA — Identification and Authentication**
+
+The findings were prioritized according to severity, affected scope, and remediation effort.
+
+## Key Takeaways
+
+This phase demonstrated the importance of:
+
+- Enforcing strong authentication controls.
+- Applying least-privilege principles.
+- Managing credentials throughout their lifecycle.
+- Regularly reviewing IAM permissions.
+- Using multiple evidence sources when validating security findings.
+
+### Skills Demonstrated
+
+`AWS IAM` `MFA` `Access Control` `Least Privilege` `AWS CLI` `AWS Config` `NIST 800-53` `Security Assessment`
