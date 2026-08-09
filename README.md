@@ -1,3 +1,4 @@
+<img width="993" height="1584" alt="Network-diagram" src="https://github.com/user-attachments/assets/48c2a828-f356-412d-bda1-70423ddfb58d" />
 # AWS Cloud Security Assessment
 
 ## 1-Month Cybersecurity Internship Project
