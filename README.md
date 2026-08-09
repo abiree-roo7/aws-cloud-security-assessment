@@ -25,7 +25,7 @@ The assessment covered four main areas:
 The work was performed using AWS security services and the AWS CLI, with findings assessed using a risk-based methodology and NIST security controls.
 
 > **Note:** All client-specific identifiers, account information, infrastructure IDs, credentials, IP addresses, ARNs, and other sensitive information have been removed or anonymized from this public portfolio.
-> ## Project Objectives
+## Project Objectives
 
 The main objectives of the assessment were to:
 
