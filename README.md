@@ -1,4 +1,3 @@
-<img width="993" height="1584" alt="Network-diagram" src="https://github.com/user-attachments/assets/48c2a828-f356-412d-bda1-70423ddfb58d" />
 # AWS Cloud Security Assessment
 
 ## 1-Month Cybersecurity Internship Project
@@ -167,7 +166,7 @@ The assessment examined how Internet-facing resources, internal resources, Secur
 
 The network diagram included in this repository is a **sanitized representation** of the assessed architecture.
 
-![AWS Network Security Topology](diagrams/aws-network-security-topology.png)
+<img width="993" height="1584" alt="Network-diagram" src="https://github.com/user-attachments/assets/48c2a828-f356-412d-bda1-70423ddfb58d" />
 
 ## Key Security Findings
 
