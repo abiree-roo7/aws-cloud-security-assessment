@@ -130,3 +130,66 @@ This phase demonstrated the importance of:
 ### Skills Demonstrated
 
 `AWS IAM` `MFA` `Access Control` `Least Privilege` `AWS CLI` `AWS Config` `NIST 800-53` `Security Assessment`
+---
+
+# Week 2 — Network & EC2 Security Assessment
+
+## Objective
+
+The second phase focused on the security posture of the AWS network and compute environment.
+
+The assessment covered VPC architecture, subnet placement, Security Groups, EC2 hardening, Instance Metadata Service configuration, and encryption at rest.
+
+## Activities Performed
+
+During the assessment, I:
+
+- Inventoried EC2 instances and VPC resources.
+- Reviewed VPC and subnet architecture.
+- Mapped EC2 instances to their associated subnets.
+- Reviewed Security Group ingress and egress rules.
+- Identified publicly exposed administrative services.
+- Investigated database network exposure.
+- Reviewed the default Security Group configuration.
+- Assessed EC2 Instance Metadata Service configuration.
+- Verified whether IMDSv2 was enforced.
+- Reviewed EBS volume encryption.
+- Collected configuration evidence using AWS CLI and AWS Config.
+- Created an annotated network topology.
+- Documented findings and remediation recommendations.
+
+## Network Architecture
+
+The assessed environment contained a VPC with public and private subnets distributed across multiple Availability Zones.
+
+The assessment examined how Internet-facing resources, internal resources, Security Groups, and routing components interacted with one another.
+
+The network diagram included in this repository is a **sanitized representation** of the assessed architecture.
+
+![AWS Network Security Topology](diagrams/aws-network-security-topology.png)
+
+## Key Security Findings
+
+The assessment identified several network and EC2 security weaknesses, including:
+
+| Category | Finding | Severity |
+|---|---|---|
+| Security Group | Public SSH exposure | Critical |
+| Security Group | Public database access | Critical |
+| Security Group | Public SSH/RDP exposure on a legacy jumpbox | Critical |
+| Security Group | Insecure default Security Group configuration | High |
+| EC2 Hardening | IMDSv1 remained permitted on a legacy instance | High |
+| Encryption | EBS volume was not encrypted at rest | High |
+
+All resource identifiers and environment-specific values have been removed or anonymized from this public portfolio.
+
+## EC2 Hardening
+
+One of the assessment checks focused on the EC2 Instance Metadata Service.
+
+The review compared the `HttpTokens` configuration across instances to determine whether IMDSv2 was enforced.
+
+The assessment identified a legacy instance where:
+
+```text
+HttpTokens = optional
